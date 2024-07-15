@@ -44,7 +44,7 @@ app.use(function (req, res, next) {
     next();
 })
 
-app.post('/', (req, res) => {
+app.get('/', (req, res) => {
     res.json({message: "I work"});
 });
 
