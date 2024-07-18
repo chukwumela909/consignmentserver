@@ -20,7 +20,7 @@ const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 //Routes
-// const adminRoute = require("./routes/adminroute")
+const packageRoute = require("./routes/thePackageRoute")
 // const authenticationRoute = require("./routes/authroute")
 // const dashboardRoute = require("./routes/dashboard")
 
@@ -49,7 +49,7 @@ app.get('/', (req, res) => {
 });
 
 
-// app.use('/admin', adminRoute)
+app.use('/package', packageRoute)
 // app.use('/auth', authenticationRoute)
 // app.use('/', dashboardRoute)
 // app.use('/', dashboardRoute)
