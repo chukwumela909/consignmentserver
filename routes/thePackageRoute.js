@@ -13,6 +13,8 @@ router.post("/create", async (req, res, next) => {
     checkpoints,
     packageDescription,
     packageStatus,
+    dateOfDeparture,
+    dateOfArrival
   } = req.body;
 
   const package = await Package.findOne({ trackingId });
@@ -31,6 +33,8 @@ router.post("/create", async (req, res, next) => {
     checkpoints,
     packageDescription,
     packageStatus,
+    dateOfDeparture,
+    dateOfArrival
   });
 
   try {
@@ -53,6 +57,8 @@ router.post("/update/:trackingId", async (req, res, next) => {
     checkpoints,
     packageDescription,
     packageStatus,
+    dateOfDeparture,
+    dateOfArrival
   } = req.body;
 
 

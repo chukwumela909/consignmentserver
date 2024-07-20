@@ -34,6 +34,14 @@ const PackageSchema = new Schema({
   packageStatus: {
     type: String,
     default: 'in transit'
+  },
+  dateOfDeparture: {
+    type: Date,
+    required: true
+  },
+  dateOfArrival: {
+    type: Date,
+    required: true
   }
 }, {
   timestamps: true // automatically add createdAt and updatedAt fields
